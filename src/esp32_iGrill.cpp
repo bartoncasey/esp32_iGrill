@@ -33,7 +33,7 @@ WiFiMulti wifiMulti;
 #include <BLEDevice.h>
 
 #include <LittleFS.h>       // https://github.com/espressif/arduino-esp32/tree/master/libraries/LittleFS
-FS* filesystem = &LittleFS;
+FS* filesystem = &LITTLEFS;
 
 const int BUTTON_PIN  = 27;
 const int RED_LED     = 26;

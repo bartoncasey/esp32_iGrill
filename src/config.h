@@ -79,3 +79,18 @@
 #define LED_INTERVAL                 2000L
 #define HEARTBEAT_INTERVAL          10000L
 #define IGRILL_HEARTBEAT_INTERVAL   60000L
+
+#include <ArduinoJson.h>
+
+void publishProbeTemp(int probeNum, int temp);
+void publishBattery(int battPercent);
+void publishPropaneLevel(int propanePercent);
+void setDeviceJSONObject(const char * fwVersion, const char * iGrillBLEAddress);
+void publishSystemInfo();
+void disconnectMQTT();
+void connectMQTT();
+void saveConfigData();
+bool writeConfigFile();
+String getSystemUptime();
+void mqttAnnounce();
+void newConfigData();
